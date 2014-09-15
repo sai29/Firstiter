@@ -1,0 +1,13 @@
+  
+  	<div class="panel callout radius">
+ <p> <%= current_user.name %></p>
+    <p><%= current_user.username %></p>
+</div>
+
+
+
+  <%= link_to "view profile",current_user %>
+
+<span>
+  <%= pluralize(current_user.projects.count, "project") %>
+</span>

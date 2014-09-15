@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:500' rel='stylesheet' type='text/css'>
+	<meta charset="UTF-8">
+	<title>SideBrain</title>
+</head>
+<body>
+
+	<br>
+	<% if signed_in? %>
+  <div class="row">
+    <aside class="span4">
+      <section>
+       <%= render 'shared/user_info' %>  
+      </section>
+      <section>
+        <%= render 'shared/project_form' %>
+      </section>
+    </aside>
+  </div>
+  <% else %>
+	<div class="row">
+		<div class="large-8 columns">
+			<h1 class="center">Finish your side projects.</h1>
+			<h3>Find new projects to work on.</h3>
+		
+			<br>
+			 <%= link_to "Sign up now!", signup_path,
+                                class: "button medium round" %>	
+                            </div>
+			<div class="large-4-columns">
+				<hr>
+			</div>
+			<% end %>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<br>
+<div class = "row">
+	<div class="text-center">
+		<h2>Edit your profile.</h2>
+	</div>
+	<br>
+
+	<%= form_for(@user) do |f| %>
+	<%= render 'shared/error_messages', object: f.object %>
+	<div class="large-4 large-offset-4 columns inline">
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+
+	<%= f.label :username %>
+	<%= f.text_field :username %>
+
+	<%= f.label :email %>
+	<%= f.text_field :email %>
+
+	<%= f.label :password %>
+	<%= f.password_field :password %>
+
+	<%= f.label :password_confirmation, "Password confirmation" %>
+	<%= f.password_field :password_confirmation %>
+	<br>
+	 <%= f.submit "Create my account", class: "button medium radius" %>
+</div>
+</div>
+<% end %>
